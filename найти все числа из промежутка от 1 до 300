@@ -1,0 +1,25 @@
+using System;
+ 
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int i = 1; i < 300; i++)
+                if (DelimCount(i) == 5)
+                    Console.Write(i + " ");
+            Console.ReadKey();
+        }
+ 
+        static int DelimCount(int i)
+        {
+            int count = 0;
+ 
+            for (int a = 1; a < i; a++)
+                if (i % a == 0)
+                    count++;
+            return count;
+        }
+    }
+}
